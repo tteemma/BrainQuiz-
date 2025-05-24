@@ -1,0 +1,145 @@
+.statsPageContainer {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	width: 100vw;
+	min-height: 100vh;
+
+	.statsPageContent {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		width: 70vw;
+		max-width: 600px;
+		height: 70vh;
+		border: 1px solid rgba(255, 255, 255, 0.1);
+		border-radius: 5px;
+		background-color: rgba(14, 14, 14, 0.63);
+		gap: 16px;
+		backdrop-filter: blur(6px);
+		box-shadow: 0 0 12px rgba(255, 255, 255, 0.05);
+
+		.finishedQuiz,
+		.bestScore,
+		.totalScore {
+			font-weight: 800;
+			color: #ffffff;
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+			width: 80%;
+			height: 5vh;
+			padding: 12px;
+			background-color: rgba(255, 255, 255, 0.05);
+			border: 1px solid rgba(255, 255, 255, 0.15);
+			border-radius: 8px;
+		}
+
+		.homeOutlined {
+			position: absolute;
+			top: 16px;
+			left: 16px;
+			font-size: 28px;
+			color: white;
+			cursor: pointer;
+			transition: color 0.2s ease;
+
+			&:hover {
+				color: #40a9ff;
+			}
+		}
+
+		.historyCollapse {
+			width: 80%;
+			overflow-y: auto;
+			max-height: 50vh;
+			padding-right: 8px;
+
+			scrollbar-width: thin;
+			scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
+
+			&::-webkit-scrollbar {
+				width: 6px;
+			}
+
+			&::-webkit-scrollbar-thumb {
+				background-color: rgba(255, 255, 255, 0.2);
+				border-radius: 6px;
+			}
+
+			.ant-collapse {
+				background-color: transparent;
+			}
+
+			.ant-collapse-item {
+				border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+			}
+
+			.ant-collapse-header {
+				color: #ffffff !important; /* Белый цвет текста с приоритетом */
+				font-weight: 800;
+				padding: 12px;
+				background-color: rgba(255, 255, 255, 0.03);
+				border-radius: 8px 8px 0 0;
+				transition: background-color 0.2s;
+
+				&:hover {
+					background-color: rgba(255, 255, 255, 0.1);
+				}
+
+				/* Убедимся, что текст внутри заголовка тоже белый */
+				.ant-collapse-header-text {
+					color: #ffffff !important;
+				}
+			}
+
+			.ant-collapse-content {
+				background-color: transparent;
+				border-top: none;
+			}
+
+			.ant-collapse-content-active {
+				animation: slideDown 0.3s ease-out;
+			}
+		}
+
+		.historyCard {
+			background-color: rgba(14, 14, 14, 0.63);
+			backdrop-filter: blur(6px);
+			border: 1px solid rgba(255, 255, 255, 0.1);
+			margin-bottom: 16px;
+			border-radius: 8px;
+			padding: 12px;
+			transition: transform 0.2s, box-shadow 0.2s;
+
+			&:hover {
+				transform: translateY(-2px);
+				box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+			}
+
+			p {
+				margin: 4px 0;
+				font-size: 14px;
+				color: #ffffff;
+			}
+
+			.ant-card-head-title {
+				color: #ffffff;
+			}
+		}
+	}
+}
+
+@keyframes slideDown {
+	from {
+		max-height: 0;
+		opacity: 0;
+	}
+	to {
+		max-height: 500px;
+		opacity: 1;
+	}
+}

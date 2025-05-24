@@ -1,0 +1,17 @@
+.statisticContainer {
+	display: flex;
+	border: 1px solid rgba(255, 255, 255, 0.15);
+	width: 100%;
+	height: 3em;
+	background-color: rgba(14, 14, 14, 0.63);
+	background-color: rgba(255, 255, 255, 0.05);
+
+	padding: 12px;
+	box-sizing: border-box;
+	margin-bottom: 10px;
+	border-radius: 4px;
+	.statisticData {
+		font-weight: 800;
+		font-size: 16px;
+	}
+}
