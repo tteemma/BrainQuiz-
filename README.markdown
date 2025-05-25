@@ -136,10 +136,6 @@ Contributions are welcome! To contribute:
 
 Please ensure your code follows the project's coding standards and includes relevant tests.
 
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
 ---
 
-Built with ❤️ by [Your Name](https://github.com/your-username). <!-- Replace with your GitHub username -->
+Built with ❤️ by [Temo4ka](https://github.com/your-username). <!-- Replace with your GitHub username -->
